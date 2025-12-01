@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnatan Costa - Portfolio Dev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 20px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+
+        .github-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">🚀</div>
+            <h1>Johnatan Costa</h1>
+            <p class="subtitle">Front-end Developer & Python Enthusiast</p>
+            <p>Transformando ideias em código e códigos em experiências incríveis</p>
+        </header>
+
+        <section class="projects-grid">
+            <div class="project-card">
+                <h3>🦸‍♂️ X-Men Project</h3>
+                <p>Projeto interativo de seleção de personagens X-Men com design responsivo e efeitos visuais.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://10jsc.github.io/x-men-dev/" class="btn" target="_blank">🎮 Ver Projeto Online</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🐱‍👤 PokeDev Project</h3>
+                <p>Projeto Pokémon com interface moderna, cards interativos e design responsivo.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://10jsc.github.io/projeto-pokedev/" class="btn" target="_blank">🎮 Ver Projeto Online</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📊 Projetos Python</h3>
+                <p>Projetos de análise de dados e automação desenvolvidos em Python e Jupyter Notebook.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Jupyter</span>
+                </div>
+                <a href="https://github.com/10jsc?tab=repositories" class="btn" target="_blank">📓 Ver Códigos Python</a>
+            </div>
+        </section>
+
+        <div class="github-link">
+            <a href="https://github.com/10jsc" class="btn" target="_blank">📁 Ver Meu GitHub Completo</a>
+        </div>
+
+        <footer>
+            <p>💼 <strong>Brasília-DF</strong> · Conecte-se comigo no <a href="https://linkedin.com/in/johnatan-s-costa-53509a243" style="color: white; text-decoration: underline;">LinkedIn</a></p>
+            <p style="margin-top: 10px; opacity: 0.8;">&copy; 2024 Johnatan Costa. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
