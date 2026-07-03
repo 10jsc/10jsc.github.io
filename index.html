@@ -230,6 +230,45 @@
     text-decoration:none; padding:8px 12px; border:2px solid var(--ink); background:var(--surface);
   }
   .thanks a:hover{background:var(--green);}
+
+  /* ===== Formulário de recado (topo) ===== */
+  .guestbook{padding:28px 0 0;}
+  .guestbook-box{
+    padding:22px;
+    background:var(--surface);
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .guestbook-box h2{
+    font-family:'Archivo Black', sans-serif;
+    font-size:1.1rem;
+  }
+  .guestbook-box .gb-sub{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.78rem; color:#444;
+  }
+  .gb-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .gb-field{display:flex; flex-direction:column; gap:6px; flex:1; min-width:220px;}
+  .gb-field label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em;
+  }
+  .gb-field input, .gb-field textarea{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.95rem;
+    border:3px solid var(--ink);
+    padding:10px 12px;
+    background:var(--bg);
+    box-shadow:3px 3px 0 var(--ink);
+    resize:vertical;
+  }
+  .gb-field textarea{min-height:80px;}
+  .gb-field input:focus, .gb-field textarea:focus{
+    outline:none;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .gb-actions{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+  .gb-note{font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:#555;}
+  @media (max-width:640px){ .gb-row{flex-direction:column;} }
 </style>
 </head>
 <body>
@@ -247,6 +286,41 @@
 </header>
 
 <main class="wrap">
+
+  <section class="guestbook">
+    <div class="guestbook-box box">
+      <h2>📬 Deixe seu recado</h2>
+      <p class="gb-sub">// saudação, crítica ou hate — todas são bem-vindas</p>
+
+      <form action="https://formsubmit.co/jsccostacs@gmail.com" method="POST">
+        <!-- Assunto do email recebido -->
+        <input type="hidden" name="_subject" value="Novo recado no portfólio!">
+        <!-- Evita redirecionar pra página de confirmação do FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Campo-armadilha anti-spam (deixe escondido, não remova) -->
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="gb-row">
+          <div class="gb-field">
+            <label for="gb-email">Seu e-mail</label>
+            <input type="email" id="gb-email" name="email" placeholder="voce@email.com" required>
+          </div>
+        </div>
+
+        <div class="gb-row">
+          <div class="gb-field">
+            <label for="gb-msg">Mensagem</label>
+            <textarea id="gb-msg" name="message" placeholder="Escreve aí..." required></textarea>
+          </div>
+        </div>
+
+        <div class="gb-actions">
+          <button type="submit" class="btn solid">Enviar mensagem</button>
+          <span class="gb-note">vai direto pro meu email, sem cadastro</span>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <section class="hero">
     <div class="hero-grid">
